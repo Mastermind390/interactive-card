@@ -1,0 +1,77 @@
+@media (width <= 600px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .background-image {
+        width: 100%;
+    }
+
+    .mobile-bg-container {
+        display: flex;
+        position: relative;
+    }
+
+    .card-back-container {
+        display: flex;
+        position: absolute;
+        right: 30px;
+        top: 40px;
+    }
+
+    .card-back-image {
+        width: 250px;
+    }
+
+    .cvv {
+        position: absolute;
+        right: 30px;
+        top: 45px;
+        font-size: small;
+        font-weight: bold;
+        color: white;
+    }
+
+    .card-front-container {
+        display: flex;
+        position: absolute;
+        bottom: -30px;
+        left: 40px;
+    }
+
+    .circle-container {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 20px;
+        left: 20px;
+    }
+
+    .fill-circle {
+        background-color: rgb(255, 255, 255);
+        width: 25px;
+        height: 25px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+
+    .outline-circle {
+        border: 1px solid white;
+        width: 13px;
+        height: 13px;
+        border-radius: 50px;
+    }
+
+    .card-number {
+        position: absolute;
+        top: 50px;
+        left: 20px;
+        font-weight: 500;
+        color: white;
+        letter-spacing: 2px;
+    }
+}
