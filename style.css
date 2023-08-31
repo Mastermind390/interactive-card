@@ -6,6 +6,10 @@
         font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
 
+    .desktop-view {
+        display: none;
+    }
+
     .background-image {
         width: 100%;
     }
@@ -13,6 +17,7 @@
     .mobile-bg-container {
         display: flex;
         position: relative;
+        margin-bottom: 80px;
     }
 
     .card-back-container {
@@ -20,10 +25,13 @@
         position: absolute;
         right: 30px;
         top: 40px;
+        justify-content: center;
+        align-items: center;
     }
 
     .card-back-image {
         width: 250px;
+        object-fit: contain;
     }
 
     .cvv {
@@ -40,6 +48,7 @@
         position: absolute;
         bottom: -30px;
         left: 40px;
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
     }
 
     .circle-container {
@@ -74,4 +83,273 @@
         color: white;
         letter-spacing: 2px;
     }
+
+    .card-name-container {
+        position: absolute;
+        bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        left: 20px;
+    }
+
+    .card-name-container span {
+        font-size: x-small;
+        font-weight: 400;
+        color: white;
+    }
+
+    .name {
+        margin-right: 100px;
+        font-size: x-small;
+    }
+
+    .card-image-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .holder-name-input-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 30px;
+        margin-bottom: 30px;
+    }
+
+    .name-input {
+        width: 280px;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        font-size: 18px;
+    }
+
+    .name-input::placeholder {
+        font-size: large;
+    }
+
+    .name-input:focus {
+        outline: black 1px;
+    }
+
+    .holder-name-input-container span {
+        margin-bottom: 10px;
+        font-size: small;
+        
+    }
+
+    .date-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .expiry-date-container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 40px;
+        margin-right: 10px;
+    }
+
+    .expiry-date-container span {
+        margin-bottom: 10px;
+        font-size: small;
+    }
+
+    .exp-date-input {
+        width: 60px;
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        font-size: 18px;
+    }
+
+    .exp-date-input::placeholder {
+        font-size: medium;
+    }
+
+    .MM-container {
+        display: flex;
+        flex-direction: column;
+        margin-right: 10px;
+    }
+
+    .MM-container span {
+        margin-bottom: 10px;
+        font-size: small;
+    }
+
+    .MM-input {
+        width: 50px;
+        padding: 15px;
+        border-radius: 10px;
+        border: solid 1px gray;
+        font-size: 18px;
+    }
+
+    .MM-input::placeholder {
+        font-size: medium;
+    }
+
+    .CVC-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CVC-container span {
+        font-size: small;
+        margin-bottom: 10px;
+    }
+
+    .CVC-input {
+        padding: 15px;
+        width: 70px;
+        border-radius: 10px;
+        border: 1px solid gray;
+        font-size: 18px;
+    }
+
+    .CVC-input, .MM-input, .exp-date-input:focus {
+        outline: none;
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    .button-container button {
+        padding: 16px 120px;
+        font-weight: bold;
+        border: none;
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        border-radius: 10px;
+        font-size: large;
+    }
+    
+    .mobile-card-details {
+        display: block;
+    }
+
+    .mobile-thank-you {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .complete-icon {
+        margin-bottom: 20px;
+    }
+
+    .thank-you {
+        font-size: 30px;
+        margin: 0;
+        margin-bottom: 10px;
+    }
+
+    .added-text {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    .continue-button {
+        padding: 16px 120px;
+        font-weight: bold;
+        border: none;
+        font-size: large;
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        border-radius: 10px;
+    }
+}
+
+@media (width >= 600px) {
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    .mobile-bg-container {
+        display: none;
+    }
+
+    .mobile-card-details {
+        display: none;
+    }
+
+    .mobile-thank-you {
+        display: none;
+    }
+
+    .desktop-view {
+        display: flex;
+    }
+
+    .desktop-bg-container {
+        display: flex;
+        position: relative;
+        top: 0;
+        bottom: 0;
+        right: 90px;
+    }
+
+    .card-back-container {
+        display: flex;
+        position: absolute;
+        top: 320px;
+        right: -130px;
+        
+    }
+
+    .card-back-image {
+        width: 330px;
+    }
+
+    .card-front-container {
+        display: flex;
+        position: absolute;
+        top: 120px;
+        right: -60px;
+        
+    }
+
+    .cvv {
+        position: absolute;
+    }
+
+    .card-number {
+        position: absolute;
+    }
+
+    .card-name-container {
+        position: absolute;
+        bottom: 40px;
+        left: 38px;
+    }
+
+    .card-name-container span {
+        font-size: small;
+        font-weight: 500;
+        color: white;
+    }
+
+    .name {
+        margin-right: 110px;
+    }
+
+    .card-number {
+        display: flex;
+        position: absolute;
+        top: 70px;
+        left: 38px;
+        letter-spacing: 2px;
+        font-weight: 700;
+        color: white;
+        font-size: 20px;
+    }
+    
 }
