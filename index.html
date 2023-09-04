@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
     <title>interactive card details</title>
 </head>
 <body>
@@ -18,7 +19,7 @@
                 <div>
                     <img class="card-back-image" src="images/bg-card-back.png" alt="">
                 </div>
-                <p class="cvv">000</p>
+                <p class="cvv js-cvv">000</p>
             </div>
 
             <div class="card-front-container">
@@ -29,62 +30,58 @@
                     <div class="fill-circle"></div>
                     <div class="outline-circle"></div>
                 </div>
-                <p class="card-number">0000 0000 0000 0000</p>
+                <p class="card-number m-card-number">0000 0000 0000 0000</p>
                 <div class="card-name-container">
-                    <span class="name">JANE APPLESEED</span>
-                    <span>00/00</span>
+                    <span class="name m-card-name">JANE APPLESEED</span>
+                    <span class="js-card-exp-date">00/00</span>
                 </div>
             </div>
             
         </div>
     </div>
 
-    <div class="mobile-card-details">
+    <div class="mobile-card-details card-details">
         <div>
             <div class="holder-name-input-container">
                 <span>CARDHOLDER NAME</span>
-                <input class="name-input" type="text" id="" placeholder="e.g. Jane Appleseed">
+                <input class="name-input m-card-name-input" type="text" placeholder="e.g. Jane Appleseed">
+                <span class="error m-card-name-error">error</span>
             </div>
         </div>
     
         <div>
             <div class="holder-name-input-container">
                 <span>CARD NUMBER</span>
-                <input class="name-input" type="text" id="" placeholder="e.g. 1234 5678 9123 0000">
+                <input class="name-input m-card-num-input" type="text" id="" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+                <span class="error m-card-number-error">error</span>
             </div>
         </div>
     
         <div class="date-container">
             <div class="expiry-date-container">
-                <span>EXP. DATE</span>
-                <input class="exp-date-input" type="text" id="" placeholder="MM">
+                <span>EXP. DATE (MM/YY)</span>
+                <div class="input-container">
+                    <input class="exp-date-input js-exp-date-input" type="text" id="" placeholder="MM" maxlength="2">
+                    <input class="MM-input js-exp-month-input" type="text" id="" placeholder="YY" maxlength="2">
+                    
+                </div>
+                <span class="error js-exp-date-error">error</span>
             </div>
-            <div class="MM-container">
-                <span>(MM/YY)</span>
-                <input class="MM-input" type="text" id="" placeholder="YY">
-            </div>
+            
             <div class="CVC-container">
                 <span>CVC</span>
-                <input class="CVC-input" type="text" id="" placeholder="e.g. 123">
+                <input class="CVC-input js-cvv-input" type="text" id="" placeholder="e.g. 123" maxlength="3">
+                <span class="error js-cvv-error">error</span>
             </div>
         </div>
     
     
         <div class="button-container">
-            <button>CONFIRM</button>
+            <button class="m-confirm-button">CONFIRM</button>
         </div>
     </div>
 
-    <div class="mobile-thank-you">
-        <div>
-            <img class="
-            complete-icon" src="images/icon-complete.svg" alt="">
-        </div>
-
-        <h2 class="thank-you">THANK YOU!</h2>
-        <P class="added-text">We've added your card details</P>
-        <button class="continue-button">Continue</button>
-    </div>
+    
     
     <div class="desktop-view">
         <div class="desktop-bg-container">
@@ -93,7 +90,7 @@
                 <div>
                     <img class="card-back-image" src="images/bg-card-back.png" alt="">
                 </div>
-                <p class="cvv">000</p>
+                <p class="cvv" id="js-d-cvv">000</p>
             </div>
 
             <div class="card-front-container">
@@ -104,55 +101,68 @@
                     <div class="fill-circle"></div>
                     <div class="outline-circle"></div>
                 </div>
-                <p class="card-number">0000 0000 0000 0000</p>
+                <p class="card-number" id="js-card-number-d">0000 0000 0000 0000</p>
                 <div class="card-name-container">
-                    <span class="name">JANE APPLESEED</span>
-                    <span>00/00</span>
+                    <span class="name js-card-name-d">JANE APPLESEED</span>
+                    <span class="js-card exp-date-d" id="js-card exp-date-d">00/00</span>
                 </div>
             </div>
             
         </div>
 
-        <div class="desktop-card-details">
+        <div class="desktop-card-details" id="desktop-card-details">
             <div>
                 <div class="holder-name-input-container">
                     <span>CARDHOLDER NAME</span>
-                    <input class="name-input" type="text" id="" placeholder="e.g. Jane Appleseed">
+                    <input class="name-input js-card-name-input-d" type="text" id="" placeholder="e.g. Jane Appleseed">
+                    <span class="error" id="js-card-name-error-d">error</span>
                 </div>
+                
             </div>
         
             <div>
                 <div class="holder-name-input-container">
                     <span>CARD NUMBER</span>
-                    <input class="name-input" type="text" id="" placeholder="e.g. 1234 5678 9123 0000">
+                    <input class="name-input" type="text" id="js-card-num-input" placeholder="e.g. 1234 5678 9123 0000" maxlength="19">
+                    <span class="error" id="js-card-number-error">error</span>
                 </div>
+                
             </div>
         
             <div class="date-container">
                 <div class="expiry-date-container">
-                    <span>EXP. DATE</span>
-                    <input class="exp-date-input" type="text" id="" placeholder="MM">
+                    <span>EXP. DATE (MM/YY)</span>
+                    <Div>
+                        <input class="exp-date-input" type="text" id="js-exp-month-input" placeholder="MM" maxlength="2">
+                        <input class="exp-date-input" type="text" id="js-exp-year-input" placeholder="YY" maxlength="2">
+                    </Div>
+                    <span class="error" id="js-exp-date-error">error</span>
                 </div>
-                <div class="MM-container">
-                    <span>(MM/YY)</span>
-                    <input class="MM-input" type="text" id="" placeholder="YY">
+               
+                <div class="expiry-date-container">
+                    <span>CVV</span>
+                    <input class="CVV" type="text" id="js-cvv-input" placeholder="e.g 123" maxlength="3">
+                    <span class="error" id="js-cvv-error">error</span>
                 </div>
-                <div class="CVC-container">
-                    <span>CVC</span>
-                    <input class="CVC-input" type="text" id="" placeholder="e.g. 123">
-                </div>
+                
             </div>
         
         
             <div class="button-container">
-                <button>CONFIRM</button>
+                <button id="confirm" class="js-confirm-button-d">CONFIRM</button>
             </div>
         </div>
+
+        
+    
     </div>
 
     
+    
 
+    
 
+    <script src="indexD.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

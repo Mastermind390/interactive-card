@@ -46,7 +46,7 @@
     .card-front-container {
         display: flex;
         position: absolute;
-        bottom: -30px;
+        bottom: -50px;
         left: 40px;
         box-shadow: 10px 10px 10px rgba(0, 0, 0, .2);
     }
@@ -90,6 +90,8 @@
         display: flex;
         justify-content: space-between;
         left: 20px;
+        margin-right: 20px;
+        width: 210px;
     }
 
     .card-name-container span {
@@ -99,8 +101,8 @@
     }
 
     .name {
-        margin-right: 100px;
         font-size: x-small;
+        font-weight: bold;
     }
 
     .card-image-container {
@@ -112,7 +114,11 @@
         display: flex;
         flex-direction: column;
         margin-left: 30px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
+    }
+
+    .holder-name-input-container span {
+        font-weight: bold;
     }
 
     .name-input {
@@ -137,10 +143,15 @@
         
     }
 
+    .error {
+        margin-top: 5px;
+        color: red;
+        visibility: hidden;
+    }
+
     .date-container {
         display: flex;
         flex-direction: row;
-        align-items: center;
         margin-bottom: 20px;
     }
 
@@ -151,9 +162,15 @@
         margin-right: 10px;
     }
 
+    .input-container {
+        display: flex;
+        flex-direction: row;
+    }
+
     .expiry-date-container span {
         margin-bottom: 10px;
         font-size: small;
+        font-weight: bold;
     }
 
     .exp-date-input {
@@ -168,15 +185,11 @@
         font-size: medium;
     }
 
-    .MM-container {
-        display: flex;
-        flex-direction: column;
-        margin-right: 10px;
-    }
-
     .MM-container span {
         margin-bottom: 10px;
         font-size: small;
+        font-weight: bold;
+       
     }
 
     .MM-input {
@@ -185,6 +198,7 @@
         border-radius: 10px;
         border: solid 1px gray;
         font-size: 18px;
+        margin-left: 5px;
     }
 
     .MM-input::placeholder {
@@ -199,6 +213,7 @@
     .CVC-container span {
         font-size: small;
         margin-bottom: 10px;
+        font-weight: bold;
     }
 
     .CVC-input {
@@ -220,13 +235,15 @@
     }
 
     .button-container button {
-        padding: 16px 120px;
+        padding: 16px 110px;
         font-weight: bold;
         border: none;
         background-color: hsl(278, 68%, 11%);
         color: white;
         border-radius: 10px;
         font-size: large;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        cursor: pointer;
     }
     
     .mobile-card-details {
@@ -234,10 +251,12 @@
     }
 
     .mobile-thank-you {
-        display: none;
+        display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        margin-top: 50px;
+        transition: 3s;
     }
 
     .complete-icon {
@@ -256,13 +275,15 @@
     }
 
     .continue-button {
-        padding: 16px 120px;
+        padding: 16px 110px;
         font-weight: bold;
         border: none;
         font-size: large;
         background-color: hsl(278, 68%, 11%);
         color: white;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         border-radius: 10px;
+        cursor: pointer;
     }
 }
 
@@ -271,6 +292,7 @@
         margin: 0;
         padding: 0;
         font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
     }
 
     .mobile-bg-container {
@@ -287,6 +309,7 @@
 
     .desktop-view {
         display: flex;
+        flex-direction: row;
     }
 
     .desktop-bg-container {
@@ -309,6 +332,18 @@
         width: 330px;
     }
 
+   
+
+    .circle-container {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        top: 20px;
+        left: 20px;
+        left: 38px;
+    }
+
     .card-front-container {
         display: flex;
         position: absolute;
@@ -317,8 +352,26 @@
         
     }
 
+    .fill-circle {
+        background-color: rgb(255, 255, 255);
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        margin-right: 10px;
+    }
+
+    .outline-circle {
+        border: 2px solid white;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px;
+    }
+
     .cvv {
         position: absolute;
+        right: 40px;
+        top: 60px;
+        font-weight: bold;
     }
 
     .card-number {
@@ -329,6 +382,9 @@
         position: absolute;
         bottom: 40px;
         left: 38px;
+        width: 250px;
+        display: flex;
+        justify-content: space-between;
     }
 
     .card-name-container span {
@@ -337,9 +393,7 @@
         color: white;
     }
 
-    .name {
-        margin-right: 110px;
-    }
+    
 
     .card-number {
         display: flex;
@@ -350,6 +404,154 @@
         font-weight: 700;
         color: white;
         font-size: 20px;
+    }
+
+    .desktop-card-details {
+        margin-left: 150px;
+        margin-top: 150px;
+        display: block;
+    }
+
+    
+
+    .holder-name-input-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 10px;
+    }
+
+    .holder-name-input-container span {
+        font-size: small;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .name-input {
+        padding: 12px;
+        width: 300px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        font-size: 18px;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .input-border-color {
+        border: 1px solid red;
+    }
+
+    .error {
+        margin: 0;
+        color: red;
+        margin-top: 5px;
+        visibility: hidden;
+    }
+
+    .name-input:focus {
+        outline: none;
+    }
+
+    .date-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    .expiry-date-container {
+        display: flex;
+        flex-direction: column;
+        margin-right: 20px;
+    }
+
+    .expiry-date-container span {
+        margin-bottom: 5px;
+        font-size: small;
+        font-weight: bold;
+    }
+
+    .exp-date-input {
+        width: 70px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        font-size: 18px;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .expDate-border-color {
+        border: 1px solid red;
+    }
+
+    .exp-date-input:focus {
+        outline: none;
+    }
+
+    .error {
+        color: red;
+    }
+
+    .CVV {
+        width: 95px;
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid gray;
+        font-size: 18px;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    .CVV:focus {
+        outline: none;
+    }
+
+    .cvv-border-color {
+        border: 1px solid red;
+    }
+
+    .button-container button {
+        padding: 10px 130px;
+        cursor: pointer;
+        border: none;
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 8px;
+    }
+
+    .desktop-thank-you {
+        margin-left: 80px;
+        margin-top: 90px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .thank-you {
+        font-size: 30px;
+        margin: 0;
+        margin-bottom: 10px;
+        margin-top: 25px;
+    }
+
+    .added-text {
+        color: grey;
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    .js-continue-button {
+        padding: 10px 100px;
+        cursor: pointer;
+        border: none;
+        background-color: hsl(278, 68%, 11%);
+        color: white;
+        font-family: "Space Grotesk",'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        font-size: 18px;
+        border-radius: 8px;
     }
     
 }
